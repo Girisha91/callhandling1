@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <!-- <title>Engineer page</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="dest\jquery\dist\jquery.min.js"></script>
+   <script src="dest\angular\angular.min.js"></script>
+   <script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+  <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+  <script src="dest\angular-messages\angular-messages.min.js"></script>
+ <script src="dest\lodash\dist\lodash.min.js"></script>
+ <script src="dest\restangular\dist\restangular.min.js"></script>
+ 	  <script src="src\js\app.js\login.js"></script>
+      <script src="src\js\controller\loginctrl.js"></script>-->
+	  <link rel="stylesheet" href="src\css\template.css">
+	  
+	  
+	  
+
+	  <script type="text/ng-template" id="messages.html">
+		<p ng-message="required" style="color:black">This needs to be a valid username</p>
+	  </script>
+	<script type="text/ng-template"id="messages1.html">
+		<p ng-message="required" >password  required</p>
+	</script>
+
+
+  <style>
+
+   /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #221556;
+      padding: 8px;
+    }
+
+    .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <!-- <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">CALL HANDLING SYSTEM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>-->
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-8">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol> -->
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="resources\images\mens.jpg" alt="Image">
+          <div class="carousel-caption">
+          </div>
+
+        </div>
+
+        <!-- <div class="item">
+          <img src="resources\images\pqr.jpg" alt="Image">
+          <div class="carousel-caption">
+            <h3>More Sell $</h3>
+            <p>Lorem ipsum...</p>
+          </div>
+        </div> -->
+      </div>
+
+      <!-- Left and right controls -->
+
+    </div>
+  </div>
+  <div class="col-sm-4">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+    <div class="well">
+	  <br/>
+
+	  <img src="resources/images/Log In.jpg" alt="Image" style="width:340px;height:50px;">
+	  <!--   -->
+
+	  <div class="container">
+<div class="main-login main-center">
+
+<form class="form-group"  name="myForm"  novalidate="">
+
+
+
+ <div class="col-lg-4">
+  	 
+	<div ng-repeat="x in result">
+	<p>
+	
+	</p>
+	</div>
+
+
+	<div class="container1">
+	<br/>
+	<div class="row1">
+	<label for="username" class="col-sm-3 control-label"><span style="color:navy-blue">Username:</span></label>
+	  <div class="col-sm-8">
+	     <input type="text" class="form-control" ng-model="data.username" name="username1" id="username2" placeholder="enter username" required/>
+			{{data.username}}
+			<div ng-messages="myForm.username1.$error" ng-if="myForm.username1.$touched && myForm.username1.$error">
+		 <div ng-messages-include="messages.html"></div>
+	 </div>
+	  </div>
+	</div>
+	</div>
+
+	    <br/>
+		<br/>
+		<br/>
+		<br/>
+
+
+	<div class="row2">
+	<label for="password" class="col-sm-3 control-label"><span style="color:navy-blue">Password:</span></label>
+
+	  <div class="col-sm-8">
+	     <input type="password" class="form-control" ng-model="data.password" name="password1" id="password2" placeholder="enter password" required/>
+		  {{data.password}}
+		  <div ng-messages="myForm.password1.$error" ng-if="myForm.password1.$touched && myForm.password1.$error">
+		 <div ng-messages-include="messages1.html"></div>
+	 </div>
+	  </div>
+	</div>
+
+
+        <br/>
+		<br/>
+		<br/>
+		<br/>
+
+			   <center> <button type="submit" class="btn btn-primary btn-large" ng-click="submit()">Login</button></center><br/>
+			   <center> <a style="color:#767846;" href="#"> Forgot password? </span></a></center>
+ <!-- </div> -->
+
+   </div>
+   </div>
+
+
+</div>
+
+
+
+
+</form>
+</div>
+
+
+
+	</div>
+  </div>
+</div>
+<hr>
+</div>
+
+
+<!-- <div class="container text-center">
+  <h3>What We Do</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+      <p>Project 2</p>
+    </div>
+    <div class="col-sm-3">
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+      <div class="well">
+       <p>Some text..</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+ -->
+
+<footer class="container-fluid text-center">
+  <strong><h5 style="color:#008000">@Snipe IT solutions</h5></strong>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+
+  <!--<title>changepassword</title>
+	  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	  <!-- <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>  -->
+<!--	 <script src="bower_components/angular/angular.min.js"></script>
+	 <script src="angular-messages/angular-messages.min.js"></script>
+	
+	 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+	  <script src="bower_components/restangular/dist/restangular.min.js"></script>
+	 
+	  <script src="ch.js"></script>
+	  <script src="chctrl.js"></script>
+	  <script src="chdir.js"></script>-->
+	  
+	<link rel="stylesheet" href="src/css/change.css">
+	
+	
+	
+	
+<script type="text/ng-template"id="messages11.html">
+<p ng-message="required"> confirm password required</p>
+<p ng-message="compareTo">password does not match</p>
+
+</script>
+<script type="text/ng-template"id="messages2.html">
+<p ng-message="required"> current password required</p>
+<p ng-message="minlength">password strength is weak</p>
+<p ng-message="maxlength">password strength good</p>
+<p ng-message="pattern">password should have  atleast one character,one num and one special chracter </p>
+
+</script>
+	
+
+
+
+
+
+<script type="text/ng-template"id="messages4.html">
+<p ng-message="required">password required</p>
+<p ng-message="minlength">password strength is weak</p>
+<p ng-message="maxlength">password strength good</p>
+<p ng-message="pattern">password should have  atleast one character,one num and one special chracter </p>
+</script>
+
+ 
+
+
+
+ 
+
+
+
+	
+</head>
+
+
+
+<body ng-controllers="changeCtrl">
+
+	<div class="main-login main-center">
+   <center><div class="headding"><h3>Change Password</h3></div></center>
+   
+   
+   
+	<form class="form-group"  name="myForm"  novalidate="">
+	
+	
+	 </br>
+	 </br>
+	 
+	 <div class="row1">
+		<label for="name" class="col-sm-2 control-lable"> Current Password:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+		 <input type="password" name="password2" class="form-control" ng-model="data.currentpassword"  ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/"   placeholder="please enter currentpassword" required />
+		 {{data.currentpassword}}
+		  <div ng-messages="myForm.password2.$error" ng-if="myForm.password2.$touched && myForm.password2.$invalid">
+			<div ng-messages-include="messages2.html"></div>
+			</div>	
+	</div>
+	</div>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		
+		<div class="row2">
+				 <label for="name" class="col-sm-2 control-lable">Password:<span class="required1"></span></label>
+				<div class="col-sm-10">
+		<!-- <input type="password" id="password" name="password" class="form_control" /> -->
+		 <!--<input type="password" class="form-control"  ng-model="data.password" name="password1" id="password" ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/"  placeholder="Enter password" required/>
+	
+
+		       <div ng-messages="myForm.password1.$error" ng-if="myForm.password1.$touched ">
+				 <div ng-messages-include="messages4.html"></div>
+					</div>-->
+
+					<input type="{{inputType}}"  id="password" name="password1" ng-model="data.newpassword"  class="form-control" placeholder="Put your password"  ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/" required/>
+					<input type="checkbox" id="checkbox" ng-click="hideShowPassword()" />
+					
+					  <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+					  <label for="checkbox" ng-if="!passwordCheckbox">Show password</label> 
+                         {{data.newpassword}}					  
+						 <div ng-messages="myForm.password1.$error" ng-if="myForm.password1.$touched ">
+				         <div ng-messages-include="messages4.html"></div>
+				       </div>
+				
+					
+         </div>
+		 </div>
+		 
+		 
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		 <div class="row3">
+		   <label for="name" class="col-sm-2 control-lable"> Confirm Password:<span class="required"></span></label>
+	      <div class="col-sm-10">
+		 <input type="password" name="password_c" class="form-control" ng-model="confirmpassword"   compare-to="data.newpassword" placeholder="please enter confirmpassword" />
+		  <!-- {{data.confirmpassword}}--> 
+		  <div ng-messages="myForm.password_c.$error" ng-if="myForm.password_c.$touched && myForm.password_c.$invalid">
+			<div ng-messages-include="messages11.html"></div>
+			</div>	
+		
+				  
+         </div>
+	     </div> 
+		 
+		  
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		
+		
+		
+		
+	
+		<div class="col-sm-12">
+		<button type="submit" class="btn btn-primary btn-large" ng-disabled="myForm.$invalid" ng-click="RegisterUser()">Submit</button>
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		
+	</form>
+	
+
+
+							
+</body>
+</html>

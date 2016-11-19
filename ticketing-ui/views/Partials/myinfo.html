@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+<head>
+  
+	  <link rel="stylesheet" href="src/css/myinfo.css">
+	  
+  
+ </head>
+
+ <body>
+ </br>
+ </br>
+    <div class="main-login main-center">
+	 <center><div class="headding"><h3>Myinfo</h3></div></center>
+	   <!-- {{ere1}} -->
+	   </br>
+	   </br>
+	     <div ng-repeat="ere in ere1"> 
+		 <table style="width:100%">
+	
+		<tr class="ww">
+		    <td>Firstname:</td>                <td>{{ere.firstname}}</td>
+		</tr >
+		<tr>
+			 <td>Middlename: </td>             <td> {{ere.middlename}}</td>
+		</tr>
+		<tr>
+			<td>Lastname: </td>                <td>{{ere.lastname}} </td>
+		</tr>
+		
+		
+		<tr>
+		    <td> Email-id:</td>              <td>  {{ere.email}} </td>
+		</tr>
+		<tr>
+			<td>Mobile:</td>                 <td>  {{ere.mobile}}</td>
+		</tr>
+		<tr>
+			<td>Contactnumber:</td>                 <td>  {{ere.contactnumber}}</td>
+		</tr>
+		<tr>
+			<td>Username:</td>                 <td>  {{ere.username}}</td>
+		</tr>
+		<!-- <tr>
+			<td>Roleid:</td>                 <td>  {{ere.roleid}}</td>
+		</tr>
+		
+		<tr>
+			<td>Status:</td>                 <td>  {{ere.status}}</td>
+		</tr> -->
+        </table>
+
+			<!--<h3> Contact Details</h3>
+			
+			Street:              {{ere.street}}</br>
+			Area:                {{ere.area}}</br>
+			City:                {{ere.city}}</br>
+			State:               {{ere.state}}</br>
+			Postalcode:          {{ere.postalcode}}</br>
+			Country:             {{ere.country}}</br>
+			Telephone:           {{ere.telephone}}</br>
+			Personalmail:        {{ere.personalmail}}</br>-->
+          
+			<!-- <center><a href="cont.html"><button type="submit" class="btn btn-primary btn-large" ng-click="editItem(ere)">Edit CONTACT Details</button></a></center> -->
+			
+	    </div>
+	 </div>
+   </body>
+</html>
+
+ 

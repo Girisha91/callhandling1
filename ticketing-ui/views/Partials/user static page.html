@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<title>User static Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="dest\jquery\dist\jquery.min.js"></script>
+<script src="dest\angular\angular.min.js"></script>
+<script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+ <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+<script src="dest\angular-messages\angular-messages.min.js"></script>
+ <script src="dest\lodash\dist\lodash.min.js"></script>
+<script src="dest\restangular\dist\restangular.min.js"></script> 
+<script src="src\js\app.js\user static page module.js"></script> 
+<script src="src\js\controller\user static page ctrl.js"></script> 
+
+  <!-- <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+  <script src="dest\jquery\dist\jquery.min.js"></script>
+  <script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+  <script src="dest\angular\angular.min.js"></script> -->
+<link rel="stylesheet" href="src\css\userhome.css">
+</head>
+<body>
+</br>
+<div class="container-fluid">
+	<center><strong><h3>TICKET</h3></strong></center>
+	
+	
+	
+			  <div class="container">
+    <div class="row">
+
+        <div id="no-more-tables">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf">
+        		<thead class="cf">
+        			<tr>
+        				<th>Ticket</th>
+        				<th>Ticket Prod</th>
+        				<th>Ticket Comp</th>
+        				<th>Contact-NO</th>
+        				<th>Problem</th>
+        				<th>Severity</th>
+        				<th>City</th>
+						<th>State</th>
+        				<th>Country</th>
+						<th>Ticket Status ID</th>
+						
+						<th>Status</th>
+						
+						<!-- <th class="Attachment">Attachment</th> -->
+        			</tr>
+        		</thead>
+        		<tbody  dir-paginate="wtc in wtc1|itemsPerPage:7">
+        			<tr>
+        				<td> {{wtc.ticketstatusid}}</td>
+        				<td>{{wtc.prodid}}</td>
+        				<td>{{wtc.compid}}</td>
+						<td>{{wtc.contactno}}</td>
+        				<td>{{wtc.problem}}</td>
+        				<td>{{wtc.severityid}}</td>
+        				<td> {{wtc.cityid}}</td>
+						<td> {{wtc.stateid}}</td>
+        				<td> {{wtc.countryid}}</td>
+        				<td> {{wtc.ticketstatusid}}</td>
+						<td>{{wtc.status}}</td>
+						<td><a ui-sref="engrply">Reply</a></td>
+        				<!-- <td {{spb.ticketid}}  class="Attachment"></td> -->
+                      
+        			</tr>
+					
+        			
+        		</tbody>
+        	</table>
+        </div>
+    </div>
+</div>
+<dir-pagination-controls max-size="15" direction-links="true" boundary-links="true"></dir-pagination-controls>
+
+</body>
+<!-- 
+			<div class="form-inline">
+			<center><a ui-sref="engrply">Reply</a></center>
+			</div>
+		</div> 
+		</div>
+		</div>
+	</div>                     
+</body> -->
+</html>

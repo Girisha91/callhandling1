@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>Engineer Reply static Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="dest\jquery\dist\jquery.min.js"></script>
+<script src="dest\angular\angular.min.js"></script>
+<script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+ <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+<!-- <script src="dest\angular-messages\angular-messages.min.js"></script> -->
+ <script src="dest\lodash\dist\lodash.min.js"></script>
+<script src="dest\restangular\dist\restangular.min.js"></script> 
+<script src="src\js\app.js\user static page module.js"></script> 
+<script src="src\js\controller\user static page ctrl.js"></script> 
+
+  <!-- <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+  <script src="dest\jquery\dist\jquery.min.js"></script>
+  <script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+  <script src="dest\angular\angular.min.js"></script> -->
+<link rel="stylesheet" href="src\css\userhome.css">
+</head>
+<body ng-controller="myCtrl">
+</br>
+<div class="container-fluid">
+	<center><strong><h3>Engineer Solution</h3></strong></center>
+	{{eng1}}
+	
+	</br>
+	<div class="modal-dialog">
+    <div class="modal-content">
+	 <div class="modal-body">
+
+	
+	<div ng-repeat="eng in eng1">
+	
+			Ticket-ID:			{{eng.ticketid}}</br></br>
+			Status:			    {{eng.status}}</br></br>
+			Description:	    {{eng.description}}</br></br>
+			Attachment:			{{eng.attachment}}</br></br>
+			
+	</div>
+			  
+<!-- <div class="container-fluid">
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Ticket-ID:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Product:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">components:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Problem:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Description:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Country:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">State:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">City:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Current Status:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Contact No:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Severity:</label>
+	</div>
+</div>
+<br>
+<div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Attachment:</label>
+	</div>
+</div>
+<hr> -->
+			
+		</div> 
+		</div>
+		</div>
+	</div>                     
+</body>
+</html>

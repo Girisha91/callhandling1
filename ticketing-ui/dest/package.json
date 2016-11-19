@@ -1,0 +1,54 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "\"dhc application\"",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-mock": "^1.0.0",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6",
+    "bourbon": "^4.2.7",
+    "d3": "^3.5.16",
+    "fontawesome": "^4.5.0",
+    "fullcalendar": "^2.7.0-beta",
+    "gulp": "^3.9.1",
+    "jquery": "^2.2.3",
+    "karma-jasmine": "^0.3.8",
+    "restangular": "^1.5.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "bourbon": "^4.2.7",
+    "bower": "^1.7.9",
+    "d3": "^3.5.16",
+    "datepicker": "0.0.0",
+    "fontawesome": "^4.5.0",
+    "fullcalendar": "^2.7.0-beta",
+    "gulp": "^3.9.1",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jquery": "^2.2.3",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-jasmine": "^0.3.8",
+    "moment": "^2.13.0",
+    "restangular": "^1.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "^C"
+  ],
+  "author": "\"snipe\"",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "\"git\""
+  }
+}

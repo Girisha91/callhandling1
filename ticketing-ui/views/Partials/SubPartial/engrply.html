@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+ <!-- <title>Eng rply</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="dest\jquery\dist\jquery.min.js"></script>
+  <script src="dest\angular\angular.min.js"></script>
+  <script src="dest\angular-messages\angular-messages.min.js"></script>
+  <script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+  <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+  
+	<script src="dest\lodash\dist\lodash.min.js"></script>
+	<script src="dest\restangular\dist\restangular.min.js"></script> 
+	<link rel="stylesheet" href="src\css\userhome.css">
+	<script src="src\js\app.js\engrply.js"></script>
+	<script src="src\js\controller\engrplycontroller.js"></script>
+	
+	<script type="text/ng-template" id="messages11.html">
+ <p ng-message="required">Please enter the field</p>
+ </script>-->
+    <link rel="stylesheet" href="src/css/userhome.css">
+</head>
+<body>
+{{result}}
+
+<form class="form-group"  name="myForm"  novalidate="">
+	<center><strong><h3>Engineer Reply</h3></strong></center>
+<div class="modal-dialog">
+    <div class="modal-content">
+	 <div class="modal-body">
+
+<!-- <div class="form-inline">
+	<div class="row">
+	<label for="message" class="col-md-4 control-label">Severity :<span class="required1"></span></label>
+	<select class="form-control"  ng-model="data.Severity"  name="Severity" id="Severity2" required/>
+	<option selected disabled value="">Select severity</option>
+	<option ng-repeat = "x in names">{{x}}</option>
+	<!-- <option value="ans">Major</option>
+	<option value="ans">Normal</option>
+	<option value="ans">Information</option>
+	</select>
+	{{data.Severity}}
+	</div>
+	
+</div>
+ <br> -->
+ <div class="form-group">
+			<label for="name" class="col-md-4 control-label" >Ticket-ID:<span class="required1"></span></label>
+			<input type="text" id="name1" name="name2" class="form-control" ng-model="data.ticketid" placeholder="Enter Ticket-ID" Required />
+			{{data.ticketid}}
+			<div ng-messages="myfrm.name2.$error" ng-if="myfrm.name2.$touched && myfrm.name2.$invalid">
+			<div ng-messages-include="messages11.html"></div>
+			</div>
+		</div>
+        <br/>
+        <br/>
+
+
+ <div class="form-inline">
+	<label for="status" class="col-md-2 control-label" >Status:</label>
+	<select class="form-control"  ng-model="data.status" ng-options="field.id as field.code for field in  data1" name="status" id="status2" required>
+        <option selected disabled value="">Select status </option>
+		
+	 
+	{{data.statusid}}
+	</select>
+	</div> 
+<br>
+<!-- <div class="form-inline">
+	<div class="row">
+	<label class="col-md-4" for="Product">Solution:</label>
+	<input type="text" class="form-control" id="Solution"  ng-model="data.Solution" >
+	{{data.Solution}}
+	</div>
+</div> -->
+<br/>
+<div class="form-group">
+	<label class="col-md-4 " for="Product">Description:</label><br>
+	<textarea rows="5" col="75" class="form-control" id="Prod1" name="prod2" ng-model="data.description" ></textarea>
+	{{data.description}}
+	</div>
+<br>
+
+ <div class="form-inline">
+	<label class="col-md-3 control-label" for="meassage">Attachment:</label>
+	<input type="file" file-model = "myFile" >
+	
+<!--	 <button ng-click = "uploadFile()">upload me</button> -->
+	 <!-- <div ng-repeat="data in data1" class="one" ng-hide="data.editing">
+				<span><div style="text-align: left">
+					<label for="fileToUpload">
+					<input type="file" fileread="data.image" ng-model="data.image" id="fileToUpload" />
+					</label>
+				</div></span>
+	</div>  -->
+	</div> 
+<hr>
+		<div class="form-inline">
+			<center><button type="submit" class="btn btn-primary btn-large" ng-disabled="myForm.$invalid" ng-click="engrply()">Submit</button></center>
+		</div> 
+		</div>
+		</div>
+	</div>
+	</form>
+</body>
+</html>

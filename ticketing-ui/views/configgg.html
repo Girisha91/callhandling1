@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+  <title>--config page---</title>
+     <!-- <script type="text/javascript" src="jquery.min.js"></script>
+      <script src="angular.min.js"></script>
+      <script src="bootstrap.min.js"></script>
+      <link rel="stylesheet"  href="bootstrap.min.css"></script>-->
+	 <link rel="stylesheet" href="src/css/configgg.css">
+
+	 <style>
+			h1 {
+				text-shadow: 2px 2px;
+			}
+			h4 {
+				color: white;
+				text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+			}
+	</style>
+</head>
+<body>
+   
+   
+    
+    <div class="modal-content">
+        
+        <div class="container-fluid">
+		<div ng-repeat="ere in ere1"> 
+				 <table style="width:100%">
+				 
+				
+					<tr class="ww">
+			              <td  style="color:#636A6A"><caption style="text-align:right"><h4>{{ere.username}}	<br>
+							  {{ere.email}} </h4></caption></td>
+					</tr>
+				 </table>
+		 </div>
+		
+			<div class="col-md-12 text-right">
+            <td><a  ui-sref="ch">Change Password</a></td>  &nbsp &nbsp ||&nbsp &nbsp
+            <td><a  ui-sref="myinfo">My Info</a></td> 
+            <br/><hr> 
+			</div>
+        </div>
+        
+  <center><div class="headding"><h1 style="color:#336586;">Welcome To The Configuration Center</h1></div></center>
+       <marquee><p style="color:#A3A56B;" class="panel panel-danger">In order to Streamline support request and better serve you, we utilize support ticket system. Every support request is assigned a unique ticket number which can use to track the progress and response online.. </p></marquee>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="panel panel-success">
+        <div class="panel-heading">REGISTRATION</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="registration" role="button">Registration</a></td></center></div>
+        <div class="panel-footer">Registration done Here</div>
+      </div>
+        </div>
+        <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">CREATE ROLE</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="roles1" role="button">Create Roles</a></td></center></div>
+        <div class="panel-footer">Set Roles for various fields</div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">CREATE PRODUCTS</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="product" role="button">Create Product</a></td></center></div>
+        <div class="panel-footer">Set Products here</div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+        
+        <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">CREATE COMPONENT</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="Ticket_Comp1" role="button">Create Ticket Component</a></td></center></div>
+        <div class="panel-footer">Create components here</div>
+      </div>
+    </div>
+      
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+        <div class="panel-heading">CREATE STATUS</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="Ticket_status1" role="button">Create Ticket Status</a></td></center></div>
+        <div class="panel-footer">Create status here</div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">CREATE SEVERITY</div>
+        <div class="panel-body"><center> <td><a class="btn btn-primary" ui-sref="severity" role="button">Create Severity</a></td></center></div>
+        <div class="panel-footer">Create severity here</div>
+      </div>
+    </div>
+    </div>
+</div><br><br>
+        
+        
+
+
+   <!-- old -->
+<!--
+ <div class="container">
+	 <div class="col-sm-4">
+	 <div class="height2">
+	       <img src="resources/images/config.jpg" class="img-circle" alt="config"  width="300px" height="300px">
+	 <div class="dropdown">
+    &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">CONFIGURATION
+    <span class="caret"></span></button>
+
+
+
+	<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+       <table class="table1 table-bordered">
+     <thead>
+       <tr>
+       <center><th>Roles  Config</th></center>
+   
+        </tr>
+     </thead>
+     <tbody>
+       <tr>
+		   <td> <a ui-sref="roles1">Create Role</a></td>
+		   <td><a ui-sref="product">Create Product</a></td>
+		   <td><a  ui-sref="Ticket_Comp1">Create Component</a></td>
+
+       </tr>
+	   <tr>
+		  <td><a  ui-sref="Ticket_status1">Create Status</a></td>
+		  <td><a  ui-sref="severity">Create Severity</a></td>
+	   </tr>
+    </tbody>
+   </table>
+    </ul>
+  </div>
+
+
+  </div>
+  </div>
+-->
+
+
+<!--
+	 <div class="col-sm-4">
+	 <div class="height2">
+	        <img src="resources/images/profile.jpg" class="img-circle" alt="profile" width="300px" height="300px" >
+		<div class="dropdown">
+	     <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">PROFILE
+             <span class="caret"></span></button>
+
+		<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+		 <table class="table2 table-bordered">
+		 <tbody>
+					<tr>
+					 <td> <a ui-sref="registration">Registration</a></td>
+				   </tr>
+
+				   <tr>
+					<td><a  ui-sref="myinfo">My Info</a></td>
+				  </tr>
+
+				  <tr>
+					<td><a  ui-sref="ch">Change Password</a></td>
+				  </tr>
+
+		 </tbody>
+		 </table>
+		</ul>
+		</div>
+	  </div>
+	 </div>
+
+	
+
+     </div>
+-->
+        <br/>
+        <br/>
+        <br/>
+
+        
+</div>
+    <footer class="container-fluid text-center">
+  <strong><h5 style="color:#008000">Copyright @ 2016-All rights are reserved. powered by Snipe IT solutions</h5></strong>
+</footer>
+</body>
+</html>

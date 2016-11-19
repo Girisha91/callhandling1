@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>Product</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="dest\jquery\dist\jquery.min.js"></script>
+<script src="dest\angular\angular.min.js"></script>
+<script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+ <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+
+<script src="dest\angular-messages\angular-messages.min.js"></script>
+ <script src="dest\lodash\dist\lodash.min.js"></script>
+<script src="dest\restangular\dist\restangular.min.js"></script> 
+ <script src="src\js\app.js\rolemodule.js"></script>
+<script src="src\js\controller\rolesctrl.js"></script> -->
+ <link rel="stylesheet" href="src\css\userhome.css">
+ 
+ 
+ <script type="text/ng-template" id="messages11.html">
+ <p ng-message="required">Please enter the field</p>
+ </script>
+  </head>
+  
+  <body ng-controller="MyProd">
+  {{roleresult}}
+ 
+  <form class="form-group" name="myfrm" novalidate />
+ 
+ 
+ <div class="modal-dialog">
+    <div class="modal-content">
+	 <div class="modal-body">
+	  <center><div class="headding"><h2 style="color:#336586;">PRODUCT</h2></div></center>
+	  <hr/>
+		<div class="form-group">
+			<label for="name" class="col-md-4 control-label" >Product Name:<span class="required1"></span></label></label>
+			<input type="text" id="name1" name="name2" class="form-control" ng-model="data.code" placeholder="Enter Product Name" Required />
+			{{data.code}}
+			<div ng-messages="myfrm.name2.$error" ng-if="myfrm.name2.$touched && myfrm.name2.$error">
+			<div ng-messages-include="messages11.html"></div>
+			</div>
+		</div>
+		<div class="form-group">
+              <label for="Description" class="col-md-4 control-label" >Description:</label><br>
+              <textarea rows="5" col="75" id="name3" name="name4" class="form-control" ng-model="data.description"  placeholder="Enter Description here"></textarea>
+			  <!-- <textarea rows="5" cols="78"></textarea> -->
+			  {{data.description}}
+			  <div ng-messages="myfrm.name4.$error" ng-if="myfrm.name4.$touched && myfrm.name4.$error">
+			<div ng-messages-include="messages11.html"></div>
+			</div>
+        </div>
+		
+			
+		 <div class="form-group">
+			<div class="radio">
+			<strong>Status:</strong> 
+			<label><input type="radio"   ng-model="data.status" value="1">Yes</label>
+			<label><input type="radio"   ng-model="data.status" value="0">No</label>
+			</div>
+		</div>
+		<br>
+			
+			<div class="form-inline">
+			<center><button type="submit" class="btn btn-primary btn-large" ng-disabled="myfrm.$invalid" ng-click="rolerply()">Submit</button></center>
+		</div> 
+            <!-- <div class="form-group">
+			        <button class="btn btn-default btn-primary" id="">
+					<i class=""></i>Submit
+					</button>
+			</div> --> 
+		</div>
+        </div>
+</div>
+</body>
+</html>

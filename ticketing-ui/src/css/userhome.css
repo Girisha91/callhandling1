@@ -1,0 +1,17 @@
+body
+{
+
+background:#AFB9B8;
+}
+.headding{
+
+background-color:#E6E9B7;
+border:1px solid black;
+border-radius:20px;
+}
+
+/* navbar */
+.navbar-inverse {
+    background-color: #336586;
+    border-color: #E7E7E7;
+}

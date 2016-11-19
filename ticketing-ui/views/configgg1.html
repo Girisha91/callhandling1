@@ -1,0 +1,219 @@
+<!doctype.html>
+<html>
+<head>
+  <title>--config page---</title>
+     <!-- <script type="text/javascript" src="jquery.min.js"></script>  
+      <script src="angular.min.js"></script>	
+      <script src="bootstrap.min.js"></script>
+      <link rel="stylesheet"  href="bootstrap.min.css"></script>-->
+	 <link rel="stylesheet" href="src/css/configgg.css"> 
+
+
+		<style>
+			h1 {
+				text-shadow: 2px 2px;
+			}
+			h4 {
+				color: white;
+				text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+			}
+		</style>
+	  
+</head>
+<body>
+    <div class="modal-content">
+        
+        <div class="container-fluid">
+		<div ng-repeat="ere in ere1"> 
+				 <table style="width:100%">
+				 
+				
+					<tr class="ww">
+			              <td  style="color:#636A6A"><caption style="text-align:right"><h4>{{ere.username}}	<br>
+							  {{ere.email}} </h4></caption></td>
+					</tr>
+				 </table>
+		 </div>
+		
+			<div class="col-md-12 text-right">
+            <td><a  ui-sref="ch">Change Password</a></td> &nbsp &nbsp || &nbsp &nbsp
+            <td><a  ui-sref="myinfo">My Info</a></td> 
+            <br/><hr> 
+        </div>
+            </div>
+  
+    <center><div class="headding"><h1 style="color:#336586;">Welcome To The Support Center</h1></div></center>
+        <marquee> <p style="color:#A3A56B;" class="panel panel-danger">In order to Streamline support request and better serve you, we utilize support ticket system. Every support request is assigned a unique ticket number which can use to track the progress and response online.. </p></marquee>
+    <br/>
+    <br/>
+    
+        <div class="container-fluid">
+	<div class="col-md-4">
+      <div class="well">
+          <center><strong>OPEN A NEW TICKET</strong></center>
+          <br/>
+          <br/>
+          <br/>
+          <center><p>Please Provide as much as possible so we can best assist you.</p></center>
+           <br/>
+            <br/>
+<!--           <div class="dropdown">-->
+          <center> <td><a class="btn btn-primary" ui-sref="UserHomePage" role="button">Open a New Ticket</a></td></center>
+         
+<!--
+           <center><button class="btn btn-primary dropdown-toggle" id="menu1" type="button" >CONFIGURATION
+               <span class="caret"></span></button></center>
+-->
+               
+<!--
+               <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+       <table class="table1 table-bordered">
+     <thead>
+       <tr>
+       <th>&nbsp&nbspTicket  Rise</th>
+     <th>&nbsp&nbspView Ticket</th>
+    <th>&nbsp&nbspEng Solution</th> 
+    </tr>
+     </thead>
+     <tbody>
+     <tr>
+       <td> <a ui-sref="UserHomePage">Ticket Raise</a></td>
+     <td><a ui-sref="Summaryreports">View Ticket</a></td>
+    <td><a  ui-sref="engrply static">Eng solution</a></td>
+        </tr>  
+   </tbody>
+   </table>
+    </ul>
+-->
+               
+               
+<!--      </div>-->
+        </div>
+    </div>
+    <div class="col-md-4">
+      <div class="well">
+          <center><strong>VIEW TICKET</strong></center>
+          <br/>
+          <br/>
+          <br/>
+          <center><p>We Provide History of all your current and past support Requests.</p></center>
+           <br/>
+            <br/>
+<!--           <div class="dropdown">-->
+          <center> <td><a class="btn btn-primary" ui-sref="Summaryreports" role="button">View Ticket</a></td></center>
+      </div>
+    </div>  
+    
+    
+    <div class="col-md-4">
+      <div class="well">
+          <center><strong>ENGINEER SOLUTION</strong></center>
+          <br/>
+          <br/>
+          <br/>
+          <center><p>We Provide Archieves and History of all your current and past support Requests complete with responces.</p></center>
+           <br/>
+            <br/>
+<!--           <div class="dropdown">-->
+          <center> <td><a class="btn btn-primary" ui-sref="engrply static" role="button">Engineer Solution</a></td></center>
+      </div>
+    </div>  
+        </div>
+    
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    
+      
+    <!-- old -->
+<!--    <div class="container"> -->
+
+<!--
+ <div class="row3">
+	 <div class="col-sm-4">
+	 <div class="height2">
+	       <img src="resources/images/config.jpg" class="img-circle" alt="config"  width="300px" height="300px">
+	 <div class="dropdown">
+    &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">CONFIGURATION
+    <span class="caret"></span></button>
+		
+		
+		
+	<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+       <table class="table1 table-bordered">
+     <thead>
+       <tr>
+       <th>&nbsp&nbspRoles  Config</th>
+     <th>&nbsp&nbspLeave Congig</th>
+    <th>&nbsp&nbspDepartment Config</th> 
+    </tr>
+     </thead>
+     <tbody>
+     <tr>
+       <td> <a ui-sref="UserHomePage">Ticket Raise</a></td>
+     <td><a ui-sref="Summaryreports">View Ticket</a></td>
+    <td><a  ui-sref="engrply static">Eng solution</a></td>
+        </tr>
+   
+    
+    
+      
+   </tbody>
+   </table>
+    </ul>
+  </div>
+	 
+	  
+  </div>
+  </div>
+	</div>
+-->
+<!--
+	 <div class="col-sm-12">
+	 <div class="height2">
+	        <img src="resources/images/profile.jpg" class="img-circle" alt="profile" width="300px" height="300px" >
+		<div class="dropdown">
+	     <button class="btn btn-primary dropdown-toggle" id="menu2" type="button" data-toggle="dropdown">PROFILE
+             <span class="caret"></span></button>
+		
+		<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+		 <table class="table2 table-bordered">
+		<tbody>
+		
+	   
+	  
+	   <tr>
+        <td><a  ui-sref="myinfo">My Info</a></td>
+      </tr>
+	  
+	  <tr>
+        <td><a  ui-sref="ch">Change Password</a></td>
+      </tr>
+	  
+	  
+	  
+	  </tbody>
+	  </table>
+	 </ul>
+    </div>
+	  </div>
+         </div>
+	
+	
+			
+	   
+	   
+	 </div>
+	 
+-->
+	  
+	  
+    </div>
+    
+<footer class="container-fluid text-center">
+  <strong><h5 style="color:#008000">Copyright @ 2016-All rights are reserved. powered by Snipe IT solutions</h5></strong>
+</footer>
+</body>
+</html>

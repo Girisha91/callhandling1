@@ -1,0 +1,161 @@
+<!Doctype html>
+<html ng-app="myApp">
+<head>
+   <title> ----home page----</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="dest/bower_components/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="dest/bower_components/bootstrap/dist/css/bootstrap.min.css"></script>
+  <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+ 
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+ <script src="dest/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="dest\node_modules\angular\angular.min.js"></script>
+    <script src="dest\node_modules\angular-ui-router\release\angular-ui-router.min.js"></script>
+	  <script src="dest/angular-messages/angular-messages.min.js"></script>
+	  <script src="dest\bower_components\lodash\dist\lodash.min.js"></script>
+	<script src="dest\bower_components\restangular\dist\restangular.min.js"></script>
+	<script src="dest\bower_components/angular/dirPagination.js"></script>
+	<script src="dest\bower_components\angular-translate\angular-translate.js"></script>
+	<script src="src/js/app.js/module.js"></script>
+	<script src="src/js/app.js/route.js"></script>
+    <script src="src/js/controllers/loginctrl.js"></script>
+	<script src="src/js/controllers/regiscontroller.js"></script>
+	<script src="src/js/controllers/engrplycontroller.js"></script>
+	<script src="src\js\directives\regisdirective.js"></script>
+	<script src="src/js/controllers/UserCtrl.js"></script>
+	<script src="src/js/controllers/summary reports controller.js"></script>
+	<script src="src/js/controllers/user static page ctrl.js"></script>
+	<script src="src/js/controllers/engrplycontroller.js"></script>
+	<script src="src/js/controllers/rolesctrl.js"></script>
+	<script src="src/js/controllers/producctrl.js"></script>
+	<script src="src/js/controllers/ComponentCtrl.js"></script>
+	<script src="src/js/controllers/ticketstatus.js"></script>
+	<script src="src/js/controllers/severityctrl.js"></script>
+	<script src="src/js/controllers/myinfoctrl.js"></script>
+	<script src="src/js/controllers/engrply static controller.js"></script>
+	<script src="src/js/controllers/chctrl.js"></script>
+	<script src="src\js\controllers\translate.js"></script>
+	<!--<script src="src/js/controllers/chctrl.js"></script>
+	<script src="src/js/controllers/countctrl.js"></script>-->
+	
+	
+	
+  <!--<link rel="stylesheet" href="nav.css">-->
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="color:white" class="navbar-brand" ui-sref="#">TICKETING SYSTEM</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a ui-sref="template">Home<span class="sr-only">(current)</span></a></li> -->
+
+  
+              <li><a ng-show="!login&&role=='1'" ui-sref="configgg">Admin<span class="sr-only"></a></li>
+			   <li><a  ng-show="!login&&role=='2'" ui-sref="configgg1">User<span class="sr-only"></a></li>
+			   <li><a ng-show="!login&&role=='4'" ui-sref="configgg2">Home<span class="sr-only"></a></li>
+			    <li><a  ng-show="!login&&role=='3'" ui-sref="configgg3">Manager<span class="sr-only"></a></li>
+
+
+			  
+                    
+                    
+                    
+                    
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+        <li><a ui-sref="template"><span ng-show="!logout&&!login" class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+  
+<div ui-view></div>
+<!-- -->
+  <div>
+	  <div id="google_translate_element"></div><script type="text/javascript">
+	function googleTranslateElementInit() {
+	  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+	}
+	</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+  </div>
+  <!-- -->
+</body>
+</html>
+          
+        
+    
+<!--<li class="dropdown1"><a class="dropdown-toggle" data-toggle="dropdown" href="#">leave<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="assleave">1)Leave type</a></li>
+
+
+            <li><a ui-sref="leave period">2)Leave period</a></li>
+            <li><a ui-sref="work week">3)Work week</a></li>
+			<li><a ui-sref="addholi">4)Create holiday</a></li>
+			<li><a ui-sref="searchholi">5)search holiday</a></li>
+		    <li><a ui-sref="mang1">6)Leave management</a></li>
+			</ul>
+          </li>
+        
+    
+<li class="dropdown2">
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" >Attendence<span class="caret"></span></a>
+     <ul class="dropdown-menu">
+            <li><a ui-sref="viewatt">1)View attendence</a></li>
+			 <li><a ui-sref="Usertracking">2)User tracking</a></li>
+          
+             </ul>
+        </li>
+   
+   <li class="dropdown3"> 
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">1)Add event</a></li>
+            <li><a href="#">2)Reports</a></li>
+             </ul>
+		</li>
+        
+   </ul>-->
+  
+ 
+  <!--<ul class="nav navbar-nav navbar-right">
+           <span style="position:absolute;right:60px;top:10px"> <button class="ss4"> <li><a href="#">Logout</a></li></button></span>
+        </ul>
+		
+		 <ul class="nav navbar-nav navbar-right">
+		 <span style="position:absolute; right:130px; top:10px">  <button class="ss4"> <li><a href="#">
+
+          <i class="glyphicon glyphicon-bell "></i></span>
+		  
+	    </ul>-->
+		<!-- <ul class="nav navbar-nav navbar-right">
+        
+        
+		 <li><a href="#"><span class="glyphicon glyphicon-bell"></span> Notification</a></li>
+		 <li><a href="#"><span class="	glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+
+ </div>
+ </nav>
+ <div ui-view></div>	
+ </body>
+ </html>-->
+   
+ 

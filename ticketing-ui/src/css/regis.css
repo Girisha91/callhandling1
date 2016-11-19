@@ -1,0 +1,80 @@
+
+.headding{
+
+background-color:#48C9B0;
+border:1px solid black;
+border-radius:20px;}
+
+/*.centered-form{
+	margin-top:60px;
+}
+.centered-form .panel{
+	background-color:white;
+	margin:auto;
+	border:1px solid black;
+	width:900px;
+	
+	margin-top:30px;
+}*/
+
+
+
+#shifts1{width:700px;}
+#roles1{width:700px;}
+#department2{width:700px;}
+
+.required1:after{
+content:"*";
+size:30px;
+	color:red;
+	position:absolute;
+}
+
+/*Show red border if kept the input empty after touching*/
+.ng-touched.ng-invalid-required {
+	border-color: red;
+}
+/* Show red border when stuff has been typed in, but its invalid */
+/*.ng-dirty.ng-invalid {
+  border-color: red;
+}
+/*Show normal border color when typed in for the first time*/
+.ng-untouched.ng-invalid {
+	border-color: #ccc;	
+}
+/*.ng-submitted input.ng-invalid{
+  border-color:red;
+  background-color:#fff0f2;
+  content:red;
+}	*/
+.ng-submitted select.ng-invalid{
+	border-color:red;
+  background-color:#fff0f2;
+  content:red;
+}
+
+
+
+
+.main-login{
+ 	background-color:white;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+
+}
+
+.main-center{
+ 	margin-top: 70px;
+ 	margin: 0 auto;
+ 	max-width: 950px;
+    padding: 40px 40px;
+
+}
+body {
+	background:#AFB9B8;
+}

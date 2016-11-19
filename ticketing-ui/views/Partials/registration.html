@@ -1,0 +1,531 @@
+<!doctype html>
+<html>
+<head>
+
+ <!-- <title>registration</title>
+	  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	  <!-- <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>  -->
+<!--	 <script src="bower_components/angular/angular.min.js"></script>
+	 <script src="angular-messages/angular-messages.min.js"></script>
+	
+	 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+	  <script src="bower_components/restangular/dist/restangular.min.js"></script>
+	 
+	  <script src="regis.js"></script>
+	  <script src="regiscontroller.js"></script>
+	  <script src="regisdirective.js"></script>-->
+	  <!--  <link rel="stylesheet" href="dest\bootstrap\dist\css\bootstrap.min.css">
+	<script src="dest\jquery\dist\jquery.min.js"></script>
+	<script src="dest\bootstrap\dist\js\bootstrap.min.js"></script>
+	<script src="dest\angular\angular.min.js"></script>
+	<script src="dest\angular-messages\angular-messages.min.js"></script>
+	<script src="dest\lodash\dist\lodash.min.js"></script>
+	<script src="dest\restangular\dist\restangular.min.js"></script>
+	<script src="src\js\app.js\regis.js"></script>
+	<script src="src\js\controller\regiscontroller.js"></script>
+	<script src="src\js\directives\regisdirective.js"></script> -->
+	<link rel="stylesheet" href="src\css\regis.css">
+	<link rel="stylesheet" href="src\css\userhome.css">
+	  
+	
+	
+	
+	
+	
+<script type="text/ng-template"id="messages11.html">
+<p ng-message="required"> confirm password required</p>
+<p ng-message="compareTo">password does not match</p>
+
+</script>
+
+	
+
+<script type="text/ng-template" id="messages2.html">
+<p ng-message="required">field required</p>
+<p ng-message="pattern">only charaters are allowed</p>
+</script>
+
+<script type="text/ng-template" id="messages3.html">
+<p ng-message="required">email-id required</p>
+<p ng-message="pattern">please enter a valid email-id</p>
+
+</script>
+
+
+
+<script type="text/ng-template"id="messages4.html">
+<p ng-message="required">password required</p>
+<p ng-message="minlength">password strength is weak</p>
+<p ng-message="maxlength">password strength good</p>
+<p ng-message="pattern">password should have  atleast one character,one num and one special chracter </p>
+</script>
+
+ 
+<script type="text/ng-template" id="messages5.html">
+<p ng-message="required">contact number required</p>
+<p ng-message="minlength">please enter a valid contact number</p>
+<p ng-message="pattern">please enter a valid contact number </p>
+
+</script> 
+
+
+ <script type="text/ng-template" id="messages6.html">
+<p ng-message="required">role need to be selected</p>
+</script>
+
+
+<script type="text/ng-template" id="messages7.html">
+<p ng-message="required"> genger need  to be selected</p>
+</script>
+
+
+<script type="text/ng-template" id="messages8.html">
+<p ng-message="required"> remote login need  to be selected</p>
+</script>
+
+
+
+	
+</head>
+
+
+
+<body>
+
+ {{result}}
+    
+   	</br>
+	<div class="main-login main-center">
+   <center><div class="headding"><h3>Registration Page</h3></div></center>
+   
+	<form class="form-group"  name="myForm"  novalidate="">
+	
+	<div class="row centered-form">
+	<div class="panel panel-default">
+	 </br>
+	 </br>
+	 
+	  <div class="row1">
+	   <label for="name" class="col-sm-2 control-lable">Name:<span class="required1"></span></label>
+	    <div class="col-sm-3">
+	  
+		    
+			   <input type="text" class="form-control" ng-model="data.firstname"  name="firstname1" id="firstname2" minlength="4" maxlength="32" placeholder="First Name"  ng-pattern="/^[a-zA-Z]*$/" required/>
+			   {{data.firstname}}
+			   <div ng-messages="myForm.firstname1.$error" ng-if="myForm.firstname1.$touched && myForm.firstname1.$error ">
+               <div ng-messages-include="messages2.html"></div>
+               </div>
+	     </div>
+		
+		
+		
+		
+		
+		
+		
+		
+	 	 <label for="name" class="control-lable"> </label>
+		
+	    <div class="col-sm-3">
+	     
+		  
+			   <input type="text" class="form-control" ng-model="data.middlename" name="middlename" id="middlename2" placeholder="Middle Name"  ng-pattern="/^[a-zA-Z]*$/">  
+			   {{data.middlename}}
+			   <div ng-messages="myForm.middlename.$error" ng-if="myForm.middlename.$touched && myForm.middlename.$error">
+               <div ng-messages-include="messages2.html"></div>
+               </div>
+	    </div>
+	
+		
+
+		
+		
+		
+		
+		
+		
+		
+		 <div class="col-sm-3 control-lable">
+	     
+		    
+			   <input type="text" class="form-control"  ng-model="data.lastname" name="lastname" id="lastname2" placeholder="Last Name"  ng-pattern="/^[a-zA-Z]*$/">
+               {{data.lastname}}
+			   <div ng-messages="myForm.lastname.$error" ng-if="myForm.lastname.$touched && myForm.lastname.$error">
+               <div ng-messages-include="messages2.html"></div>
+                </div>			   
+	     </div>
+		</div>
+		
+		
+		
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+
+		
+	
+		 <div class="row2" >
+		 <label for="roles" class="col-sm-2 control-label">Roles:<span class="required1"></span></label>
+							<div class="col-sm-10">
+								
+								   
+									
+									 <select  class="form-control"  ng-model="data.roleid" ng-options="field.id as field.code for field in rrrr" name="roles" id="roles2" required>
+		     
+									   <option selected disabled value="">Choose here</option>
+									  
+									</select>
+
+									 {{data.roleid}}
+									<div ng-messages="myForm.roles.$error" ng-if="myForm.roles.$touched && myForm.roles.$error">
+									<div ng-messages-include="messages2.html"></div>
+										</div>
+									 
+								</div>
+			                </div>
+		  
+		 
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		<div class="row3">
+		 <label for="name" class="col-sm-2 control-lable">User name:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+	   
+		   
+			   <input type="text" class="form-control" ng-model="data.username" name="username1" id="username2" placeholder="UserName" required/> 
+			    {{data.username}}
+				<div ng-messages="myForm.username1.$error" ng-if="myForm.username1.$touched && myForm.username1.$error">
+			   <div ng-messages-include="messages2.html"></div>
+			   </div> 
+	     </div>
+		 </div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		<div class="row3">
+		<label for="name" class="col-sm-2 control-lable">Email:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+	  
+		    
+			   <input type="email" class="form-control" ng-model="data.email" name="email" id="email2" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/"  placeholder="Enter  your Email" required/>
+                {{data.email}}
+				<div ng-messages="myForm.email.$error" ng-if="myForm.email.$touched && myForm.email.$error">
+                 <div ng-messages-include="messages3.html"></div>
+                  </div>			   
+	     </div>
+		 </div>
+	
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		
+		<div class="row4">
+				 <label for="name" class="col-sm-2 control-lable">Password:<span class="required1"></span></label>
+				<div class="col-sm-10">
+		<!-- <input type="password" id="password" name="password" class="form_control" /> -->
+		 <!--<input type="password" class="form-control"  ng-model="data.password" name="password1" id="password" ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/"  placeholder="Enter password" required/>
+	
+
+		       <div ng-messages="myForm.password1.$error" ng-if="myForm.password1.$touched ">
+				 <div ng-messages-include="messages4.html"></div>
+					</div>-->
+
+					<input type="{{inputType}}"  id="password" name="password1" ng-model="data.password"  class="form-control" placeholder="Put your password"  ng-pattern="/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/" required/>
+					<input type="checkbox" id="checkbox" ng-click="hideShowPassword()" />
+					
+					  <label for="checkbox" ng-if="passwordCheckbox">Hide password</label>
+					  <label for="checkbox" ng-if="!passwordCheckbox">Show password</label> 
+                         {{data.password}}					  
+						 <div ng-messages="myForm.password1.$error" ng-if="myForm.password1.$touched ">
+				         <div ng-messages-include="messages4.html"></div>
+				       </div>
+				
+					
+         </div>
+		 </div>
+		 
+		 
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		 <div class="row5">
+		<label for="name" class="col-sm-2 control-lable"> Confirm Password:<span class="required"></span></label>
+	    <div class="col-sm-10">
+		 <input type="password" name="password_c" class="form-control" ng-model="confirmpassword"  required compare-to="data.password" placeholder="please enter confirmpassword" />
+		  <div ng-messages="myForm.password_c.$error" ng-if="myForm.password_c.$touched && myForm.password_c.$invalid">
+			<div ng-messages-include="messages11.html"></div>
+			</div>	
+		
+				  
+         </div>
+	     </div>
+		 
+		  
+		
+		
+		
+<!-- 		<div class="row6">
+		<label for="name" class="col-sm-2 control-lable">Access Card Number:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+	   
+		    
+			   <input type="text" class="form-control" ng-model="data.accesscardnumber" name="access" id="access2" placeholder="Enter  your Access card number" required/> 
+						{{data.accesscardnumber}}
+						<div ng-messages="myForm.access.$error" ng-if="myForm.access.$touched && myForm.access.$error">
+						 <div ng-messages-include="messages2.html"></div>
+					</div>				   
+	     </div>
+		 </div> -->
+		
+	
+		</br>
+		</br>
+		
+		
+		
+		
+		
+<!-- 		<div class="row7">
+		<label for="name" class="col-sm-2 control-lable">Date Of Birth:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+	   
+		    
+			   <input type="date" class="form-control" ng-model="data.dateofbirth" name="dob"  id="dob2" placeholder="Enter your date of birth" required/>  
+                 {{data.dateofbirth|date:'yyyy/M/dd'}} 
+				
+				<div ng-messages="myForm.dob.$error" ng-if="myForm.dob.$touched && myForm.dob.$error">
+				<div ng-messages-include="messages2.html"></div>
+				</div>			   
+			  
+	     </div>
+		 </div> -->
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		
+<!-- 		<div class="row8">
+		<label for="name" class="col-sm-2 control-lable">Date Of Joining:<span class="required1"></span></label>
+	    <div class="col-sm-10">
+	   
+		    
+			   
+               <input type="date" class="form-control"  ng-model="data.dateofjoining" name="doj" id="doj2" placeholder="Enter your date of joining" required/> 
+                {{data.dateofjoining|date:'yyyy/M/dd'}}
+			  
+			   <div ng-messages="myForm.doj.$error" ng-if="myForm.doj.$touched && myForm.doj.$error">
+				<div ng-messages-include="messages2.html"></div>
+				</div>				   
+			  
+	     </div>
+		 </div> -->
+		 
+		 <div class="row9">
+		<label for="name" class="col-sm-2 control-lable">Mobile Number:<span class="required1"></span></label>
+		
+	    <div class="col-sm-10">
+	     
+	    
+		  
+			   <input type="text" class="form-control"  ng-model="data.mobile" name="mobile" id="mobile2"  ng-pattern="/^(\+\91{1,2}[- ])\d{10}$/"  placeholder="+91-8147600233" required/> 
+                 {{data.mobile}}
+              <div ng-messages="myForm.mobile.$error" ng-if="myForm.mobile.$touched && myForm.mobile.$error">
+				<div ng-messages-include="messages5.html"></div>
+				</div>
+
+		 </div>
+	     </div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		<div class="row9">
+		<label for="name" class="col-sm-2 control-lable">Contact:<span class="required1"></span></label>
+		
+	    <div class="col-sm-10">
+	     
+	    
+		  
+			   <input type="text" class="form-control"  ng-model="data.contactnumber" name="cno" id="cno2"  ng-pattern="/^(\+\91{1,2}[- ])\d{10}$/"  placeholder="+91-8147600233" required/> 
+                 {{data.contactnumber}}
+              <div ng-messages="myForm.cno.$error" ng-if="myForm.cno.$touched && myForm.cno.$error">
+				<div ng-messages-include="messages5.html"></div>
+				</div>
+
+                		 
+		
+		 </div>
+	     </div>
+	
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		 
+		
+		
+		
+<!-- 		 <div class="row10">
+		 <label for="name" class="col-sm-2 control-lable">Shift:<span class="required1"></span></label>
+	     <div class="col-sm-10">
+	        
+		   
+			   <select class="form-control" ng-model="data.shift" name="shifts" id="shifts2"  required>
+			    
+			    <option selected disabled value="">Choose here</option>
+				<option  ng-repeat="y in shifts">{{y}}</option>
+				
+				</select>
+				{{data.shift}}
+				<div ng-messages="myForm.shifts.$error" ng-if="myForm.shifts.$touched && myForm.shifts.$error">
+				 <div ng-messages-include="messages2.html"></div>
+				  </div>	
+				
+				
+	     </div>
+		 </div> -->
+	
+		
+		
+		
+		<!-- <div class="row11">
+		 <label for="name" class="col-sm-2 control-lable">Department:<span class="required1"></span></label>
+	     <div class="col-sm-10">
+	        
+		    
+			   <select class="form-control" ng-model="data.deptname" name="dept" id="department1"  required>
+			    
+			    <option selected disabled  value="">Choose here</option>
+				<option  ng-repeat="z in dept">{{z}}</option>
+				
+				</select>
+				{{data.deptname}}
+				<div ng-messages="myForm.dept.$error" ng-if="myForm.dept.$touched && myForm.dept.$error">
+				 <div ng-messages-include="messages2.html"></div>
+				  </div>
+				
+	     </div>
+		 </div> -->
+	     
+		
+		</br>
+		</br>
+		
+		
+		
+		
+		
+		<!-- <div class="row12">
+		 <label for="name" class="col-sm-2 control-lable">Gender:<span class="required1"></span></label>
+		 <div class="col-sm-10">
+		<input type="radio" name="gender" value="male" ng-model="data.gender" required/>&nbsp Male &nbsp &nbsp
+		<input type="radio" name="gender" value="female" ng-model="data.gender" required/>&nbsp Female
+		
+		
+		</div>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		<div class="row13">
+		 <label for="name" class="col-sm-2 control-lable">Remote Login:<span class="required1"></span></label>
+		 <div class="col-sm-10">
+		<input type="radio" name="login" value="yes"  ng-model="data.remotelogin" required/>&nbsp Yes &nbsp &nbsp &nbsp &nbsp
+		<input type="radio" name="login" value="no"  ng-model="data.remotelogin" required/>&nbsp No
+		
+		
+		</div>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		 -->
+		
+		
+		<div class="row14">
+		 <label for="name" class="col-sm-2 control-lable">Status:<span class="required1"></span></label>
+		 <div class="col-sm-10">
+		<input type="radio" name="status" ng-model="data.status" value="1" required/>&nbsp Active &nbsp &nbsp
+		<input type="radio" name="status" ng-model="data.status"  value="0" required/>&nbsp Inactive
+		{{data.status}}
+		 
+		</div>
+		</div>
+		
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		
+		
+		
+		
+		<div class="row11">
+		<div class="col-sm-6">
+		<button type="reset" class="btn btn-primary btn-large"  value="Reset!"  >Reset</button>
+		</div>
+	
+		<div class="col-sm-6">
+		<button type="submit" class="btn btn-primary btn-large" ng-click="RegisterUser()">Register</button>
+		</div>
+		</div>
+		
+		</div>
+		</div>
+		
+	</form>
+	</div>
+
+
+							
+</body>
+</html>
